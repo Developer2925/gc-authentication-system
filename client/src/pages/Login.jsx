@@ -10,7 +10,7 @@ const Login = () => {
     email: "",
     password: "",
   });
-  const backendURL = "http://localhost:3000";
+  const backendURL = "https://gc-authentication-system-server.onrender.com" //"http://localhost:3000";
   const navigate = useNavigate();
 
   // Changing the values

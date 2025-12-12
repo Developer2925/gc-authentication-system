@@ -40,6 +40,7 @@ Each step is explained in detail below.
 ---
 
 # 1️⃣ User Registration Workflow
+<img width="600" height="400" alt="Screenshot 2025-12-13 at 0 34 58" src="https://github.com/user-attachments/assets/24af77dc-aea1-4c79-9a83-cf1a62ceeb37" />
 
 ### **Step 1: User enters details**
 
@@ -84,6 +85,7 @@ After successful registration, frontend redirects the user to the **Login Page**
 ---
 
 # 2️⃣ User Login Workflow
+<img width="600" height="400" alt="Screenshot 2025-12-13 at 0 35 06" src="https://github.com/user-attachments/assets/2f354c39-e3c6-4d4c-90b4-463904c94844" />
 
 ### **Step 1: User enters email and password**
 
@@ -113,6 +115,7 @@ localStorage.setItem("token", receivedToken);
 ```
 
 ### **Step 6: Redirect to Home Page**
+<img width="600" height="400" alt="Screenshot 2025-12-13 at 0 35 20" src="https://github.com/user-attachments/assets/a6b682fa-4681-4963-9dbf-7fcbc12a79d8" />
 
 User is directed to the **Home Page**, which is protected.
 

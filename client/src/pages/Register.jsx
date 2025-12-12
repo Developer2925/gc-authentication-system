@@ -12,7 +12,7 @@ const Register = () => {
     password: "",
   });
   const navigate = useNavigate();
-  const backendURL = "https://gc-authentication-system-server.onrender.com" //"http://localhost:3000";
+  const backendURL = "http://localhost:3000";//"https://gc-authentication-system-server.onrender.com" 
 
   // Changing the values
   const handleChanges = (e) => {

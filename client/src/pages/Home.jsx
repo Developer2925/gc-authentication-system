@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 const Home = () => {
   const [username, setUsername] = useState();
   const navigate = useNavigate();
-  const backendURL = "https://gc-authentication-system-server.onrender.com" //"http://localhost:3000";
+  const backendURL = "http://localhost:3000";//"https://gc-authentication-system-server.onrender.com" 
   // User Verification
   const fetchUser = async () => {
     try {

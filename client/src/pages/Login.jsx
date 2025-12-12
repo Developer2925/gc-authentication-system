@@ -11,6 +11,7 @@ const Login = () => {
     password: "",
   });
   const navigate = useNavigate();
+  
   // Changing the values
   const handleChanges = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });

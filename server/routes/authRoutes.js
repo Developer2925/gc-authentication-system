@@ -92,7 +92,8 @@ router.get("/home", verifyToken, async (req, res) => {
     if (rows.length === 0) {
       return res.status(404).json({ message: "user does not exist" });
     }
-    return res.status(201).json({ user: rows[0] });
+    console.log();
+    return res.status(201).json({ user: rows[0], username: rows[0].username });
   } catch (error) {
     return res.status(500).json({ message: "server error" });
   }

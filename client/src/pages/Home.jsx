@@ -1,10 +1,11 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Home = () => {
+  const [username, setUsername] = useState();
   const navigate = useNavigate();
   // User Verification
   const fetchUser = async () => {
@@ -15,8 +16,14 @@ const Home = () => {
           authorization: `Bearer ${token}`,
         },
       });
+
       if (response.status !== 201) {
         navigate("/login");
+      }
+
+      if (response.status === 201) {
+        setUsername(response.data.username);
+        toast.success(`Welcome ${response.data.username}`);
       }
     } catch (error) {
       navigate("/login");
@@ -38,6 +45,7 @@ const Home = () => {
       <div className="flex flex-col gap-2 font-bold text-6xl h-full w-full justify-center items-center">
         <p className="text-[#f1f1f1]">Welcome</p>
         <p className="text-[#f1f1f1]">ようこそ</p>
+        <p className="text-[#f1f1f1]">{username}</p>
       </div>
       <button
         onClick={handleLogout}

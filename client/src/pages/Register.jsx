@@ -12,6 +12,7 @@ const Register = () => {
     password: "",
   });
   const navigate = useNavigate();
+  const backendURL = "http://localhost:3000";
 
   // Changing the values
   const handleChanges = (e) => {
@@ -22,10 +23,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:3000/auth/register",
-        values
-      );
+      const response = await axios.post(`${backendURL}/auth/register`, values);
       if (response.status === 201) {
         toast.success(response.data.message);
         navigate("/login");

@@ -7,11 +7,12 @@ import { toast } from "react-toastify";
 const Home = () => {
   const [username, setUsername] = useState();
   const navigate = useNavigate();
+  const backendURL = "http://localhost:3000";
   // User Verification
   const fetchUser = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get("http://localhost:3000/auth/home", {
+      const response = await axios.get(`${backendURL}/auth/home`, {
         headers: {
           authorization: `Bearer ${token}`,
         },

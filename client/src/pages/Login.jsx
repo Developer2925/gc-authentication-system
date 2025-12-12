@@ -10,8 +10,9 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const backendURL = "http://localhost:3000";
   const navigate = useNavigate();
-  
+
   // Changing the values
   const handleChanges = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -21,10 +22,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        "http://localhost:3000/auth/login",
-        values
-      );
+      const response = await axios.post(`${backendURL}/auth/login`, values);
       if (response.status === 201) {
         // console.log(response.data.token);
         toast.success(response.data.message);
